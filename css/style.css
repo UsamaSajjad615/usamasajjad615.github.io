@@ -760,6 +760,7 @@ span#main {
 .contact-text h4 {
 	font-size: 24px;
 }
+
 .contact-icon span,.contact-info input,.contact-info textarea {font-size: 18px;}
 .contact-info .massage{min-height: 200px;}
 .contact-form .form-message.success{color:green}
