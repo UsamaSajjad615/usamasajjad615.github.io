@@ -1810,3 +1810,182 @@
           height: 450px;
      }
 }
+/* ==========================================================
+   Hero profile photo / layout fix
+   Keep the supplied professional photo fully visible and
+   preserve its original colors and proportions.
+   ========================================================== */
+.single-slider.slider-height {
+     height: 100vh;
+     min-height: 720px;
+     max-height: none;
+}
+
+.single-slider.slider-height .slider-container {
+     height: 100%;
+     max-height: none;
+}
+
+.single-slider.slider-height .slider-container > .row {
+     height: 100%;
+     min-height: 100%;
+     align-items: center;
+}
+
+.single-slider.slider-height .slider-content {
+     margin-top: 0;
+     margin-bottom: 0;
+}
+
+.single-slider.slider-height .slider-img {
+     position: relative !important;
+     right: auto !important;
+     margin: 0 !important;
+     padding: 0 !important;
+     width: 100%;
+     height: auto !important;
+     max-height: none;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+
+.single-slider.slider-height .slider-img .hero-profile-photo {
+     display: block;
+     width: min(460px, 100%);
+     max-width: 460px;
+     height: auto;
+     max-height: calc(100vh - 150px);
+     object-fit: contain;
+     object-position: center;
+     border-radius: 12px;
+     margin: 0 auto;
+     filter: none;
+}
+
+/* Keep the decorative circles behind the photo without clipping it. */
+.single-slider.slider-height .slider-img::before,
+.single-slider.slider-height .slider-img::after {
+     pointer-events: none;
+}
+
+@media screen and (max-width: 1199px) {
+     .single-slider.slider-height {
+          min-height: 680px;
+     }
+
+     .single-slider.slider-height .slider-img .hero-profile-photo {
+          width: min(400px, 100%);
+          max-width: 400px;
+          max-height: calc(100vh - 140px);
+     }
+}
+
+@media screen and (max-width: 767px) {
+     .single-slider.slider-height {
+          height: auto;
+          min-height: 0;
+          padding: 120px 0 70px;
+     }
+
+     .single-slider.slider-height .slider-container,
+     .single-slider.slider-height .slider-container > .row {
+          height: auto;
+          min-height: 0;
+     }
+
+     .single-slider.slider-height .slider-content {
+          margin: 0 auto 45px;
+          width: 100%;
+     }
+
+     .single-slider.slider-height .slider-img {
+          width: 100%;
+          height: auto !important;
+     }
+
+     .single-slider.slider-height .slider-img .hero-profile-photo {
+          width: min(360px, 88vw);
+          max-width: 360px;
+          max-height: none;
+          height: auto;
+     }
+}
+
+/* Final sizing pass: keep the complete supplied square portrait visible. */
+@media screen and (min-width: 1200px) {
+     .single-slider.slider-height .slider-img .hero-profile-photo {
+          width: clamp(380px, 28vw, 460px);
+          max-width: 460px;
+          max-height: none;
+          flex: 0 0 auto;
+     }
+
+     .single-slider.slider-height .slider-content h1 {
+          font-size: clamp(78px, 6.5vw, 112px);
+          line-height: .92;
+     }
+
+     .single-slider.slider-height .slider-content h2 {
+          line-height: 1.45;
+     }
+
+     .single-slider.slider-height .slider-content h2 span {
+          line-height: 1.25;
+     }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+     .single-slider.slider-height .slider-img .hero-profile-photo {
+          width: 380px;
+          max-width: 380px;
+          max-height: none;
+     }
+}
+
+
+/* ==========================================================
+   Hero final cleanup: the portrait is intentionally removed
+   from the Hello section so the text layout remains clean at
+   every screen size. The portrait is retained in the About section.
+   ========================================================== */
+.single-slider.slider-height .hero-text-only-wrapper {
+     width: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+
+.single-slider.slider-height .hero-text-only {
+     width: min(100%, 1050px);
+     margin: 0 auto;
+     padding: 0 30px;
+     text-align: center;
+}
+
+.single-slider.slider-height .hero-text-only h1,
+.single-slider.slider-height .hero-text-only h2 {
+     text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+     .single-slider.slider-height .hero-text-only {
+          padding: 0 18px;
+     }
+}
+
+
+/* Final hero height adjustment: keep the Hello section compact after removing the portrait. */
+.single-slider.slider-height{height:560px !important;min-height:560px !important;max-height:560px !important;}
+.single-slider.slider-height .slider-container{height:100% !important;max-height:560px !important;}
+@media (max-width:991px){
+  .single-slider.slider-height{height:500px !important;min-height:500px !important;max-height:500px !important;}
+  .single-slider.slider-height .slider-container{max-height:500px !important;}
+}
+@media (max-width:575px){
+  .single-slider.slider-height{height:430px !important;min-height:430px !important;max-height:430px !important;}
+  .single-slider.slider-height .slider-container{max-height:430px !important;}
+  .single-slider.slider-height .hero-text-only h1{margin-bottom:16px !important;}
+  .single-slider.slider-height .hero-text-only h2{line-height:1.35;}
+  .single-slider.slider-height .hero-text-only .btn{margin-top:24px !important;}
+}

@@ -760,7 +760,6 @@ span#main {
 .contact-text h4 {
 	font-size: 24px;
 }
-
 .contact-icon span,.contact-info input,.contact-info textarea {font-size: 18px;}
 .contact-info .massage{min-height: 200px;}
 .contact-form .form-message.success{color:green}
@@ -1000,3 +999,36 @@ skill-card {
 	color: #333; /* Unified color */
 }
 
+
+/* Updated hero profile photo */
+.slider-img .hero-profile-photo {
+    width: 420px;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 12px;
+}
+
+/* Main-page skills section: match the certifications section background */
+#skills.skill-area {
+    background: #f5f4f4;
+}
+#skills.skill-area .title h2 {
+    color: #2e2e37;
+}
+#skills.skill-area .skill-category-card {
+    background: #ffffff;
+    border: 1px solid #e1e1e1;
+    box-shadow: 0 4px 18px rgba(46, 46, 55, 0.06);
+}
+#skills.skill-area .skill-category-card h4 {
+    color: #2e2e37;
+}
+#skills.skill-area .skill-tags span {
+    color: #555560;
+    background: #ffffff;
+    border-color: rgba(199, 81, 66, 0.45);
+}
+#skills.skill-area .custom-view-all-btn_new {
+    color: #fff;
+}
