@@ -89,7 +89,7 @@
                                 </nav>
                             </div><!-- /main-menu -->
                             <div class="header-btn pl-45">
-                                <a href="#" target="_blank" class="white-text text-uppercase d-inline-block">download  cv</a>
+                                <a href="CV_Usama_Sajjad.pdf" target="_blank" rel="noopener" class="white-text text-uppercase d-inline-block">download  cv</a>
                             </div><!-- /header-btn -->
                             <div class="mobile-m-bar d-block d-xl-none ml-30">
                                 <a class="mobile-menubar theme-color primary-hover" href="javascript:void(0);"><i class="far fa-bars"></i></a>
@@ -153,7 +153,7 @@
                                             data-delay="100" data-deleteDelay="1000" data-colors="#c75142"></span><span class="cursor theme-color d-inline-block" data-owner="main"></span>
                                         </span>
                                     </h2>
-                                    <a href="#" class="btn position-relative over-hidden theme-bg text-white text-uppercase mt-40">Say Hello</a>
+                                    <a href="#contact" class="btn position-relative over-hidden theme-bg text-white text-uppercase mt-40 say-hello-btn">Say Hello</a>
                                 </div><!-- /slider-content -->
                             </div><!-- /slider-wrapper -->
                         </div><!-- /col -->
@@ -828,7 +828,7 @@
                                         <div class="contact-text">
                                             <h4 class="mb-2">Phone</h4>
                                             <p class="mb-0">
-                                                <a class="text-color primary-hover d-block" href="#">+49 157 50742731</a>
+                                                <a class="text-color primary-hover d-block" href="tel:+4915750742731">+49 157 50742731</a>
                                             </p>
                                         </div>
                                     </li><!-- /contact-email -->
@@ -843,7 +843,7 @@
                                             <h4 class="mb-2">Email</h4>
                                             <p class="mb-0">
                                                 <a class="text-color primary-hover d-block"
-                                                    href="#">usamasajjad615@gmail.com</a>
+                                                    href="mailto:usamasajjad615@gmail.com">usamasajjad615@gmail.com</a>
                                             </p>
                                         </div>
                                     </li><!-- /contact-phone -->
@@ -853,7 +853,10 @@
                         <div class="col-xl-6 col-lg-7 col-md-12  col-sm-12 col-12">
                             <div class="contact-wrapper">
                                 <div class="contact-form mt-45">
-                                    <form id="contact-form">
+                                    <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                                        <input type="hidden" name="access_key" value="c000b953-ed36-46de-a552-f2f20da54405">
+                                        <input type="hidden" name="from_name" value="Portfolio Website">
+                                        <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none">
                                         <div class="contact-info pt-20">
                                             <div class="row">
                                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 pr6 mb-12"
@@ -861,7 +864,7 @@
                                                     data-aos-duration="2000">
                                                     <input
                                                         class="name w-100 theme-border pl-20 pt-15 pb-15 pr-10 form-color border-radius5 openS-font-family"
-                                                        type="text" name="inputName" id="inputName"
+                                                        type="text" name="name" id="inputName" required
                                                         placeholder="Your Name">
                                                     <!-- /name -->
                                                 </div><!-- /col -->
@@ -870,7 +873,7 @@
                                                     data-aos-duration="2500">
                                                     <input
                                                         class="email w-100 theme-border pl-20 pt-15 pb-15 pr-10 form-color border-radius5 openS-font-family"
-                                                        type="email" name="inputEmail" id="inputEmail"
+                                                        type="email" name="email" id="inputEmail" required
                                                         placeholder="Your Email">
                                                     <!-- /email -->
                                                 </div><!-- /col -->
@@ -879,7 +882,7 @@
                                                     data-aos-duration="2000">
                                                     <input
                                                         class="phone w-100 theme-border pl-20 pt-15 pb-15 pr-10 form-color border-radius5 openS-font-family"
-                                                        type="text" name="inputPhone" id="inputPhone"
+                                                        type="text" name="phone" id="inputPhone"
                                                         placeholder="Your Phone">
                                                     <!-- /phone -->
                                                 </div><!-- /col -->
@@ -888,7 +891,7 @@
                                                     data-aos-duration="2500">
                                                     <input
                                                         class="subject w-100 theme-border pl-20 pt-15 pb-15 pr-10 form-color border-radius5 openS-font-family"
-                                                        type="text" name="inputSubject" id="inputSubject"
+                                                        type="text" name="subject" id="inputSubject"
                                                         placeholder="Your Subject">
                                                     <!-- /subject -->
                                                 </div><!-- /col -->
@@ -898,67 +901,16 @@
                                                     data-aos="fade-up" data-aos-anchor-placement="top-bottom"
                                                     data-aos-duration="2000">
                                                     <textarea class="massage w-100 theme-border pl-20 pt-15 pr-10 primary-color border-radius5 openS-font-family"
-                                                        name="inputMessage" id="inputMessage"
+                                                        name="message" id="inputMessage" required
                                                         placeholder="Start writing message here"></textarea>
                                                 </div><!-- /col -->
                                             </div><!-- /row -->
                                             <button
                                             class="btn position-relative over-hidden text-white d-inline-block theme-bg white-text text-uppercase"
-                                            type="button" 
-                                            name="submit" 
-                                            data-aos="fade-up"
-                                            data-aos-anchor-placement="top-bottom" 
-                                            data-aos-duration="2500"
-                                            onclick="showContactPopup()">
+                                            type="submit" name="submit" data-aos="fade-up"
+                                            data-aos-anchor-placement="top-bottom" data-aos-duration="2500">
                                             Submit
                                         </button>
-                               
-                                        
-                                        <!-- Popup Overlay -->
-                                        <div id="popupOverlay" class="popup-overlay">
-                                            <div class="popup-content">
-                                                <p>Please email <strong>usamasajjad615@gmail.com</strong> or call <strong>+4915750742731</strong>.</p>
-                                                <button onclick="closeContactPopup()" class="close-btn">Close</button>
-                                            </div>
-                                        </div>
-                                        
-                                        <!-- CSS for Popup Styling -->
-                                        <style>
-                                            /* Overlay background */
-                                            .popup-overlay {
-                                                display: none; /* Initially hidden */
-                                                position: fixed;
-                                                top: 0;
-                                                left: 0;
-                                                width: 100%;
-                                                height: 100%;
-                                                background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-                                                justify-content: center;
-                                                align-items: center;
-                                                z-index: 1000;
-                                            }
-                                        
-                                            /* Popup content box */
-                                            .popup-content {
-                                                background-color: white;
-                                                padding: 20px;
-                                                border-radius: 8px;
-                                                max-width: 300px;
-                                                text-align: center;
-                                                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-                                            }
-                                        
-                                            /* Close button */
-                                            .close-btn {
-                                                margin-top: 15px;
-                                                padding: 8px 16px;
-                                                background-color: #333;
-                                                color: #fff;
-                                                border: none;
-                                                border-radius: 4px;
-                                                cursor: pointer;
-                                            }
-                                        </style>
                                             
                                         </div>
                                     </form>
@@ -1016,6 +968,13 @@
 
 
 <style>
+/* Contact form status + smooth scroll */
+html{scroll-behavior:smooth;}
+#contact{scroll-margin-top:20px;}
+.form-message{font-size:16px;font-weight:600;min-height:24px;}
+.form-message.success{color:#4caf50;}
+.form-message.error{color:#e5533d;}
+#contact-form button[disabled]{opacity:.6;cursor:not-allowed;}
 /* Portfolio skills */
 .portfolio-skills-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;width:100%;}
 .skill-category-card{padding:28px 24px;border:1px solid rgba(255,255,255,.08);border-radius:12px;background:rgba(255,255,255,.02);height:100%;}
